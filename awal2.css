@@ -1,0 +1,59 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-image: url(ABSENT.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 300px;
+    background-color: #F88B69;
+    margin: 0 auto;
+    margin-top: 180px;
+    padding: 20px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+h2 {
+    text-align: center;
+}
+
+label {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #F88B69;
+    border-radius: 5px;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #8a3f29;
+    color: #d67a7d;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #351911
+    ;
+}
+.wrap .menu ul{
+    padding:0;
+    margin:0;
+    background:yellow;
+    overflow:hidden; /*memakai overflow hidden kegunaan supaya apabila  size melebihi batas, 
+    overflowhidden akan membuatnya tdak kelihatan di layar */
+}
+.wrap .menu ul li{
+    float: right;
+    list-style-type:none;
+    padding:10px;
+}

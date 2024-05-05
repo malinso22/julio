@@ -1,0 +1,31 @@
+// ...
+
+// Inisialisasi array untuk menyimpan data absensi
+var attendanceDataArray = [];
+
+document.getElementById("attendanceForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get form values
+    var employeeName = document.getElementById("employeeName").value;
+    var attendanceStatus = document.getElementById("attendanceStatus").value;
+
+    // Tambahkan data ke array absensi
+    attendanceDataArray.push({ name: employeeName, status: attendanceStatus });
+
+    // Display data
+    var dataList = document.getElementById("dataList");
+    var listItem = document.createElement("li");
+    listItem.textContent = ${employeeName} - ${attendanceStatus};
+    dataList.appendChild(listItem);
+
+    // Clear form fields
+    document.getElementById("employeeName").value = "";
+    document.getElementById("attendanceStatus").value = "present"; // Reset to default
+});
+
+// Fungsi untuk menampilkan semua nama yang sudah absen
+function showAbsentNames() {
+    var absentNames = attendanceDataArray.filter(data => data.status === "absent").map(data => data.name);
+    alert("Absent Names:\n" + absentNames.join("\n"));
+}
